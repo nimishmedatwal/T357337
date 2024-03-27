@@ -1,52 +1,50 @@
 <template>
-    <center>
-    <div class="mw-ui-icon-input">
-      <input v-model="searchQuery" placeholder="Search Wikipedia" class="mw-ui-input" />
-      <button @click="search" class="mw-ui-icon-btn">
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </button>
+    <div>
+      <cdx-search-input
+        v-model="inputValue"
+        button-label="Search"
+        aria-label="SearchInput with Button demo"
+        @update:model-value="onUpdate"
+        @submit-click="onSearch"
+        class="inputseach"
+      />
     </div>
-    </center>
   </template>
   
   <script>
-  export default {
-    data() {
+  import { defineComponent, ref } from "vue";
+  import { CdxSearchInput } from "@wikimedia/codex";
+  import '@wikimedia/codex/dist/codex.style.css'
+
+  export default defineComponent({
+    name: "SearchBar",
+    components: { CdxSearchInput },
+    setup(_, { emit }) {
+      const inputValue = ref("");
+  
+      const onUpdate = (value) => {
+        inputValue.value = value;
+      };
+  
+      const onSearch = () => {
+        if (inputValue.value.trim() !== "") {
+          // Emit search event
+          emit("search", inputValue.value.trim());
+        }
+      };
+  
       return {
-        searchQuery: '',
+        inputValue,
+        onUpdate,
+        onSearch,
       };
     },
-    methods: {
-      search() {
-        this.$emit('search', this.searchQuery);
-      },
-    },
-  };
+  });
   </script>
-
-  <style scoped>
-  .mw-ui-icon-input {
-    display: flex;
-    align-items: center;
-    border: 1px solid var(--mw-ui-border-color);
-    border-radius: var(--mw-ui-border-radius);
-    overflow: hidden;
+  
+<style>
+.inputseach{
     width: 30vw;
-    margin-top:10vh ;
-  }
-  
-  .mw-ui-input {
-    flex: 1;
-    padding: 10px;
-
-  }
-  
-  .mw-ui-icon-btn {
-    padding: 10px;
-    cursor: pointer;
-  }
-  
-  .fas.fa-search {
-    color: var(--mw-ui-color-brand);
-  }
-  </style>
+    margin-top:5vh;
+}
+</style>
