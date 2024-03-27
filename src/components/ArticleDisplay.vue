@@ -4,6 +4,7 @@
         <div class="mw-ui-card">
           <h2 class="mw-ui-heading-h2">{{ article.title }}</h2>
           <p class="mw-ui-body">{{ article.extract }}</p>
+          <a :href="article.url" target="_blank" class="read-more-button">Read More <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
         </div>
       </div>
     </center>
@@ -45,6 +46,15 @@
     font-size: 16px;
     line-height: 1.6;
     color: #666;
+  }
+  
+  .read-more-button {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
   }
   </style>
   

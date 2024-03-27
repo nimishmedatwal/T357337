@@ -46,6 +46,7 @@ export default {
         this.article = {
           title: data.title,
           extract: data.extract,
+          url: data.content_urls.desktop.page
         };
       } catch (error) {
         console.error(error);
