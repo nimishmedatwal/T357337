@@ -32,7 +32,7 @@
     border-radius: var(--mw-ui-border-radius);
     overflow: hidden;
     width: 30vw;
-    margin-top:30vh ;
+    margin-top:10vh ;
   }
   
   .mw-ui-input {

@@ -1,8 +1,12 @@
 <template>
+  <center>
   <div id="app" class="mw-ui-container">
+    <h2 class="mw-ui-heading-h2" style="margin-top: 5vh;">Search and explore Wikipedia articles</h2> 
+    <p class="mw-ui-body">The product is a small web application built using Vue.js and integrated with the Wikimedia Codex design system. It allows users to search for articles on Wikipedia by entering a title in the search bar. Upon searching, the application fetches information about the article from the Wikimedia API and displays the title and a short extract of the article in a visually appealing manner using Codex components and styles. Users can interact with the application to quickly access and read Wikipedia articles within a familiar and consistent design environment provided by the Wikimedia Codex design system.</p>
     <SearchBar @search="fetchArticle" />
     <ArticleDisplay v-if="article" :article="article" />
   </div>
+  </center>
 </template>
 
 <script>
