@@ -1,29 +1,65 @@
-# .
+# Wikimedia Microtask
 
-This template should help get you started developing with Vue 3 in Vite.
+This is a small web application built with Vue.js and the Wikimedia Codex UI library that allows users to search for Wikipedia articles and view basic information about them.
 
-## Recommended IDE Setup
+## Features
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- Search for Wikipedia articles using the provided search input field.
+- Display basic information about the searched article, including its title and summary.
+- Direct link to read more about the article on Wikipedia.
 
-## Customize configuration
+## Technologies Used
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+- Vue.js: A progressive JavaScript framework for building user interfaces.
+- Wikimedia Codex UI library: A UI library for Wikimedia projects.
 
-## Project Setup
+## Getting Started
 
-```sh
-npm install
-```
+To get a local copy up and running follow these simple steps.
 
-### Compile and Hot-Reload for Development
+### Prerequisites
 
-```sh
-npm run dev
-```
+- Node.js: Make sure Node.js is installed on your machine. You can download it from [here](https://nodejs.org/).
 
-### Compile and Minify for Production
+### Installation
 
-```sh
-npm run build
-```
+1. Clone the repository:
+
+   ```sh
+   git clone https://github.com/OpenAI/gpt3-sandbox.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```sh
+   cd gpt3-sandbox/examples/wikimedia-article-viewer
+   ```
+
+3. Install dependencies:
+
+   ```sh
+   npm install
+   ```
+
+### Usage
+
+1. Start the development server:
+
+   ```sh
+   npm run serve
+   ```
+
+2. Open your browser and go to `http://localhost:8080` to view the application.
+
+3. Enter the title of the Wikipedia article you want to search for in the provided input field and click the "Search" button.
+
+4. The application will fetch and display basic information about the article.
+
+### License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+### Acknowledgements
+
+- This project is inspired by the need for a simple tool to quickly view information about Wikipedia articles.
+- Built as part of a demonstration for using Vue.js and Wikimedia Codex UI library.
