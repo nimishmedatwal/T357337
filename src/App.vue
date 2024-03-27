@@ -1,10 +1,10 @@
 <template>
   <center>
     <div id="app">
-      <h2 style="margin-top: 5vh;">
-        Search and explore Wikipedia articles
+      <h2 class="app-heading">
+        Search and Explore Wikipedia Articles
       </h2>
-      <p class="mw-ui-body">
+      <p class="app-body">
         The product is a small web application built using Vue.js and integrated
         with the Wikimedia Codex design system. It allows users to search for
         articles on Wikipedia by entering a title in the search bar. Upon
@@ -56,13 +56,22 @@ export default {
 </script>
 
 <style scoped>
-.mw-ui-body{
-  width:70vw;
-}
 #app {
-  /* Use Wikimedia's base font styles */
-  @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css");
   font-family: var(--mw-ui-font-family-base);
   color: var(--mw-ui-color-text);
+}
+
+.app-heading {
+  margin-top: 5vh;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.app-body {
+  width: 70vw;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
 }
 </style>
